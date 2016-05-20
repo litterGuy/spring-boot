@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.cc.dao.AccountDao">
+	<resultMap id="result" type="Account">
+		<result property="id" column="id" />
+		<result property="icon" column="icon" />
+		<result property="username" column="username" />
+		<result property="lastLoginDate" column="lastLoginDate" />
+		<result property="email" column="email" />
+		<result property="address" column="address" />
+		<result property="name" column="name" />
+		<result property="createDate" column="createDate" />
+		<result property="roleID" column="roleID" />
+		<result property="password" column="password" />
+		<result property="updateDate" column="updateDate" />
+	</resultMap>
+
+	<select id="queryAll" resultType="java.util.List" resultMap="result">
+		select * from api_account 
+    </select>
+
+</mapper>
